@@ -70,14 +70,9 @@
         const mm = String(m).padStart(2, "0");
         const ss = String(s).padStart(2, "0");
         el.textContent = hh + ":" + mm + ":" + ss;
-
-        // 13:00:00 ~ 13:00:59 彩虹效果，持续1分钟
-        if (h === 13 && m === 0) {
-          el.classList.add("rainbow");
-        } else {
-          el.classList.remove("rainbow");
-        }
       }
+
+      el.classList.add("rainbow");
 
       update();
       setInterval(update, 1000);
